@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engr. Victor Amosu | Materials & Metallurgical Engineer • Industrialist • Civic Leader</title>
+  <meta name="description" content="Official Executive & Engineering Portal of Engr. Victor Amosu — Founder & MD of Wylout Designs Limited, Director at Cleancycles Recovery Limited, Misimau Limited, and Arcalaxia Shipping Company Ltd." />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#0A0D12',
+            charcoal: '#11161F',
+            slatepanel: '#161D29',
+            bronze: {
+              DEFAULT: '#C89D66',
+              light: '#E2BA85',
+              dark: '#9B7340',
+            },
+            blueprint: '#1E3A8A'
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    :root {
+      --bg-primary: #0A0D12;
+      --bg-secondary: #11161F;
+      --bg-card: rgba(22, 29, 41, 0.78);
+      --accent: #C89D66;
+      --grid-line: rgba(200, 157, 102, 0.07);
+      --border-subtle: rgba(255, 255, 255, 0.09);
+    }
+
+    body.blueprint-mode {
+      --bg-primary: #071326;
+      --bg-secondary: #0B1D3A;
+      --bg-card: rgba(13, 33, 66, 0.82);
+      --accent: #38BDF8;
+      --grid-line: rgba(56, 189, 248, 0.12);
+      --border-subtle: rgba(56, 189, 248, 0.24);
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      color: #F1F5F9;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      transition: background-color 0.4s ease;
+    }
+
+    .bg-cad-grid {
+      background-size: 48px 48px;
+      background-image: 
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+    }
+
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-subtle);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .glass-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.65), 0 0 25px -5px rgba(200, 157, 102, 0.15);
+    }
+
+    .accent-text {
+      color: var(--accent);
+    }
+
+    .accent-border {
+      border-color: var(--accent);
+    }
+
+    .accent-bg {
+      background-color: var(--accent);
+    }
+
+    /* Architectural Corner Ticks */
+    .cad-corner {
+      position: relative;
+    }
+    .cad-corner::before,
+    .cad-corner::after {
+      content: '';
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-color: var(--accent);
+      pointer-events: none;
+      transition: all 0.3s ease;
+    }
+    .cad-corner::before {
+      top: -1px;
+      left: -1px;
+      border-top: 2px solid var(--accent);
+      border-left: 2px solid var(--accent);
+    }
+    .cad-corner::after {
+      bottom: -1px;
+      right: -1px;
+      border-bottom: 2px solid var(--accent);
+      border-right: 2px solid var(--accent);
+    }
+
+    /* Executive Photo Grading */
+    .photo-grade-color {
+      filter: contrast(1.05) saturate(1.03) brightness(0.99);
+      transition: filter 0.45s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .photo-grade-mono {
+      filter: grayscale(100%) contrast(1.18) brightness(0.95);
+      transition: filter 0.45s ease, transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0A0D12;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #263142;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #C89D66;
+    }
+  </style>
+</head>
+<body class="bg-cad-grid selection:bg-bronze selection:text-obsidian">
+
+  <!-- TOP TELEMETRY BAR -->
+  <div class="border-b border-white/10 bg-obsidian/90 backdrop-blur-md text-xs font-mono py-2 px-4 sm:px-8 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center space-x-4">
+        <span class="flex items-center text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse mr-2"></span>
+          PORTAL ONLINE // WWW.VICTORAMOSU.COM
+        </span>
+        <span class="hidden md:inline text-slate-500">|</span>
+        <span class="hidden md:inline text-slate-400">LOC: LEKKI SCHEME 2, LAGOS, NG (6.4698° N, 3.5852° E)</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <span id="lagos-time" class="text-slate-400 hidden sm:inline">WAT: --:--:--</span>
+        <button onclick="toggleBlueprintMode()" id="mode-toggle-btn" class="px-2.5 py-1 rounded border border-bronze/40 text-bronze hover:bg-bronze/10 transition flex items-center gap-1.5 cursor-pointer">
+          <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+          <span id="mode-label">CAD Blueprint Mode</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION -->
+  <header class="border-b border-white/10 bg-obsidian/80 backdrop-blur-xl sticky top-[37px] z-40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3.5 group">
+        <div class="w-11 h-11 rounded bg-gradient-to-br from-bronze to-bronze-dark flex items-center justify-center text-obsidian font-serif font-bold text-2xl tracking-tighter shadow-lg group-hover:scale-105 transition">
+          VA
+        </div>
+        <div>
+          <span class="block font-serif text-xl sm:text-2xl font-bold tracking-wide text-white leading-none">VICTOR AMOSU</span>
+          <span class="block font-mono text-[10px] tracking-[0.2em] text-bronze uppercase mt-1">B.Eng • Materials & Metallurgy</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium text-slate-300">
+        <a href="#dossier" class="hover:text-bronze transition">Executive Profile</a>
+        <a href="#ventures" class="hover:text-bronze transition">Venture Ecosystem</a>
+        <a href="#engineering" class="hover:text-bronze transition">Facade & C4i Engineering</a>
+        <a href="#civic" class="hover:text-bronze transition">LESTRA & Westwoods</a>
+        <a href="#contact" class="px-5 py-2.5 rounded bg-bronze text-obsidian font-semibold hover:bg-bronze-light transition shadow-md">
+          Executive Inquiry
+        </a>
+      </nav>
+
+      <button onclick="toggleMobileMenu()" class="lg:hidden p-2 text-slate-300 hover:text-white">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-white/10 bg-charcoal px-6 py-5 space-y-3 text-sm">
+      <a href="#dossier" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-bronze">Executive Profile</a>
+      <a href="#ventures" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-bronze">Venture Ecosystem</a>
+      <a href="#engineering" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-bronze">Facade & C4i Engineering</a>
+      <a href="#civic" onclick="toggleMobileMenu()" class="block py-2 text-slate-200 hover:text-bronze">LESTRA & Westwoods Cluster</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block py-2.5 text-center rounded bg-bronze text-obsidian font-semibold">Executive Inquiry</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="dossier" class="relative py-14 sm:py-20 lg:py-24 px-4 sm:px-8 overflow-hidden border-b border-white/10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Executive Narrative -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-bronze/30 text-bronze font-mono text-xs">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>PRINCIPAL DESIGN ENGINEER • INDUSTRIALIST • CIVIC LEADER</span>
+        </div>
+
+        <h1 class="font-serif text-4xl sm:text-6xl lg:text-[64px] font-bold text-white leading-[1.06] tracking-tight">
+          Engineering Structural <span class="italic font-normal accent-text">Permanence</span> & Industrial Scale.
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+          Materials & Metallurgical Engineer (<strong class="text-white font-medium">FUTO</strong>) driving multi-sector infrastructure across West Africa. Founder & Managing Director of <strong class="text-white font-medium">Wylout Designs Limited</strong>, spearheading institutional architectural envelopes, command center interiors, industrial asset recovery (<strong class="text-white font-medium">Cleancycles Recovery Limited</strong>), energy distribution (<strong class="text-white font-medium">Misimau Limited</strong>), and deep-sea bulk maritime trade (<strong class="text-white font-medium">Arcalaxia Shipping Company Ltd</strong>).
+        </p>
+
+        <!-- Key Role Pills -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+          <div class="glass-card p-3.5 rounded-lg flex items-start gap-3">
+            <i data-lucide="building-2" class="w-5 h-5 text-bronze shrink-0 mt-0.5"></i>
+            <div>
+              <div class="text-xs font-mono text-slate-400">FOUNDER & MANAGING DIRECTOR</div>
+              <div class="text-sm font-semibold text-white">Wylout Designs Limited (Wylout Group)</div>
+            </div>
+          </div>
+          <div class="glass-card p-3.5 rounded-lg flex items-start gap-3">
+            <i data-lucide="recycle" class="w-5 h-5 text-bronze shrink-0 mt-0.5"></i>
+            <div>
+              <div class="text-xs font-mono text-slate-400">FOUNDER & DIRECTOR</div>
+              <div class="text-sm font-semibold text-white">Cleancycles Recovery Limited</div>
+            </div>
+          </div>
+          <div class="glass-card p-3.5 rounded-lg flex items-start gap-3">
+            <i data-lucide="flame" class="w-5 h-5 text-bronze shrink-0 mt-0.5"></i>
+            <div>
+              <div class="text-xs font-mono text-slate-400">DIRECTOR & SENIOR PARTNER</div>
+              <div class="text-sm font-semibold text-white">Misimau Limited (Energy & Commodities)</div>
+            </div>
+          </div>
+          <div class="glass-card p-3.5 rounded-lg flex items-start gap-3">
+            <i data-lucide="ship" class="w-5 h-5 text-bronze shrink-0 mt-0.5"></i>
+            <div>
+              <div class="text-xs font-mono text-slate-400">DIRECTOR • MARITIME & MINERALS</div>
+              <div class="text-sm font-semibold text-white">Arcalaxia Shipping Company Ltd</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-4 pt-3">
+          <a href="#ventures" class="px-7 py-3.5 rounded bg-bronze text-obsidian font-semibold hover:bg-bronze-light transition flex items-center gap-2 shadow-lg">
+            <span>Explore Venture Portfolio</span>
+            <i data-lucide="arrow-down-right" class="w-4 h-4"></i>
+          </a>
+          <a href="#civic" class="px-6 py-3.5 rounded border border-white/15 hover:border-bronze text-white font-medium transition flex items-center gap-2 bg-white/5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-bronze"></i>
+            <span>LESTRA & Westwoods Cluster</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Executive Portrait Frame (image_8e3e59.jpg) -->
+      <div class="lg:col-span-5">
+        <div class="glass-card rounded-xl p-3 sm:p-4 cad-corner relative group">
+          <!-- Top Frame Telemetry Header -->
+          <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-[11px] font-mono text-slate-400">
+            <span class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-bronze"></span>
+              EXEC_DOSSIER // ENGR. V. AMOSU
+            </span>
+            <div class="flex items-center gap-2">
+              <button onclick="togglePortraitGrade()" id="grade-btn" class="px-2 py-0.5 rounded bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition text-[10px]" title="Toggle Color / Architectural Monochrome">
+                Grade: Color
+              </button>
+              <button onclick="openLightbox('image_8e3e59.jpg', 'Engr. Victor Amosu — Principal Design Studio', 'Founder & Managing Director at Wylout Designs Limited inside the executive office suite featuring custom Wylout acoustic frosted-strip glass partitions.')" class="p-1 rounded bg-white/5 hover:bg-white/10 text-bronze border border-white/10 transition" title="Inspect Full Resolution">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Portrait Image Container -->
+          <div class="relative aspect-[4/4.6] rounded-lg overflow-hidden bg-charcoal border border-white/10">
+            <img 
+              id="hero-portrait-img"
+              src="image_8e3e59.jpg" 
+              alt="Engr. Victor Amosu at his executive engineering desk"
+              class="w-full h-full object-cover object-center photo-grade-color group-hover:scale-[1.02]"
+              onerror="handleImageFallback(this, 'image_8e3e59.jpg', 'Executive Office Portrait')"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-obsidian/20 to-transparent pointer-events-none"></div>
+
+            <!-- Bottom Overlay Badge -->
+            <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded-lg bg-obsidian/85 backdrop-blur-md border border-white/10 flex items-center justify-between">
+              <div>
+                <div class="text-[10px] font-mono text-bronze uppercase tracking-wider">Principal Design Studio • Lagos</div>
+                <div class="text-sm font-serif font-bold text-white">Engr. Victor Amosu, B.Eng (FUTO)</div>
+                <div class="text-[11px] text-slate-400">Acoustic Frosted-Strip Partitioning by Wylout Designs Ltd</div>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-bronze/15 border border-bronze/40 text-bronze font-mono text-[10px]">
+                MD / CEO
+              </span>
+            </div>
+          </div>
+
+          <!-- Quick Sub-Switcher for Executive Field & Command Photos -->
+          <div class="mt-3 pt-3 border-t border-white/10">
+            <div class="text-[10px] font-mono text-slate-400 uppercase mb-2 flex items-center justify-between">
+              <span>SELECT EXECUTIVE FIELD VIEW:</span>
+              <span id="hero-view-indicator" class="text-bronze">01 / 04 — Design Studio</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+              <button onclick="switchHeroPhoto('image_8e3e59.jpg', '01 / 04 — Design Studio', 'Principal Design Studio • Lagos', 'Acoustic Frosted-Strip Partitioning by Wylout Designs Ltd')" class="text-left p-1.5 rounded bg-white/5 hover:bg-bronze/15 border border-bronze/40 transition group/btn">
+                <div class="text-[10px] font-mono text-bronze truncate">01. Studio</div>
+                <div class="text-[9px] text-slate-400 truncate">Wylout HQ</div>
+              </button>
+              <button onclick="switchHeroPhoto('image_8dc27b.jpg', '02 / 04 — Industrial Plant Ops', 'Industrial Field Operations', 'Plant Decommissioning & Petroleum Infrastructure Inspection')" class="text-left p-1.5 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 transition group/btn">
+                <div class="text-[10px] font-mono text-white group-hover/btn:text-bronze truncate">02. Field PPE</div>
+                <div class="text-[9px] text-slate-400 truncate">Plant Ops</div>
+              </button>
+              <button onclick="switchHeroPhoto('image_8dc699.jpg', '03 / 04 — Deep Blue C4i Center', 'Maritime Security Command', 'NIMASA / HLSI Deep Blue C4i Systems Integration')" class="text-left p-1.5 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 transition group/btn">
+                <div class="text-[10px] font-mono text-white group-hover/btn:text-bronze truncate">03. C4i Command</div>
+                <div class="text-[9px] text-slate-400 truncate">Deep Blue</div>
+              </button>
+              <button onclick="switchHeroPhoto('image_8dafb6.jpg', '04 / 04 — Waterway Mission', 'Hydrological Reconnaissance', 'LASWA / LESTRA Waterway & Canal Infrastructure Inspection')" class="text-left p-1.5 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 transition group/btn">
+                <div class="text-[10px] font-mono text-white group-hover/btn:text-bronze truncate">04. Waterways</div>
+                <div class="text-[9px] text-slate-400 truncate">LESTRA / LASWA</div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXECUTIVE METRICS BAR -->
+  <section class="border-b border-white/10 bg-charcoal/70 py-8 px-4 sm:px-8">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="border-l-2 border-bronze pl-4">
+        <div class="font-mono text-xs text-slate-400 uppercase">CORE DISCIPLINE</div>
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-white mt-0.5">Materials & Metallurgy</div>
+        <div class="text-xs text-slate-400 mt-1">B.Eng — Federal University of Technology, Owerri</div>
+      </div>
+      <div class="border-l-2 border-bronze pl-4">
+        <div class="font-mono text-xs text-slate-400 uppercase">ACTIVE ENTERPRISES</div>
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-white mt-0.5">4 Operating Firms</div>
+        <div class="text-xs text-slate-400 mt-1">Construction • Asset Recovery • Energy • Shipping</div>
+      </div>
+      <div class="border-l-2 border-bronze pl-4">
+        <div class="font-mono text-xs text-slate-400 uppercase">MARITIME & MINERAL SCOPE</div>
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-white mt-0.5">100,000 MT Class</div>
+        <div class="text-xs text-slate-400 mt-1">Bulk Vessels • Bauxite, Kaolin & Gypsum Exports</div>
+      </div>
+      <div class="border-l-2 border-bronze pl-4">
+        <div class="font-mono text-xs text-slate-400 uppercase">COMMUNITY GOVERNANCE</div>
+        <div class="font-serif text-2xl sm:text-3xl font-bold text-white mt-0.5">LESTRA & Westwoods</div>
+        <div class="text-xs text-slate-400 mt-1">Vice Chairman (LESTRA) • Chairman, Westwoods Cluster</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VENTURE ECOSYSTEM SECTION (ALL 4 COMPANIES WITH SUPPLIED PHOTOS) -->
+  <section id="ventures" class="py-20 px-4 sm:px-8 border-b border-white/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+        <div>
+          <div class="font-mono text-xs text-bronze uppercase tracking-widest mb-2">// 01 • MULTI-SECTOR INDUSTRIAL PORTFOLIO</div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Executive Venture Ecosystem</h2>
+        </div>
+        <div class="flex flex-wrap gap-2">
+          <button onclick="filterVentures('all')" class="venture-filter-btn active px-3.5 py-1.5 rounded text-xs font-mono border border-bronze bg-bronze text-obsidian font-semibold transition">ALL VENTURES (4)</button>
+          <button onclick="filterVentures('construction')" class="venture-filter-btn px-3.5 py-1.5 rounded text-xs font-mono border border-white/15 text-slate-300 hover:border-bronze transition">STRUCTURAL & FIT-OUT</button>
+          <button onclick="filterVentures('industrial')" class="venture-filter-btn px-3.5 py-1.5 rounded text-xs font-mono border border-white/15 text-slate-300 hover:border-bronze transition">REFINERY & RECOVERY</button>
+          <button onclick="filterVentures('maritime')" class="venture-filter-btn px-3.5 py-1.5 rounded text-xs font-mono border border-white/15 text-slate-300 hover:border-bronze transition">MARITIME & ENERGY</button>
+        </div>
+      </div>
+
+      <!-- 4 Venture Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- 1. WYLOUT DESIGNS LIMITED -->
+        <div class="venture-card glass-card rounded-xl overflow-hidden flex flex-col justify-between cad-corner" data-category="construction">
+          <div>
+            <!-- Visual Header with 4-Photo Switcher -->
+            <div class="relative h-72 bg-charcoal border-b border-white/10 overflow-hidden group">
+              <img 
+                id="wylout-card-img"
+                src="image_8dc5ba.jpg" 
+                alt="Wylout Designs Limited — Bank of Industry Corporate Atrium Fit-Out"
+                class="w-full h-full object-cover object-center transition duration-700 group-hover:scale-105"
+                onerror="handleImageFallback(this, 'image_8dc5ba.jpg', 'Wylout Institutional Atrium Fit-Out')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded bg-obsidian/85 border border-bronze/40 text-bronze font-mono text-[11px]">
+                  FOUNDER, MD & PRINCIPAL DESIGN ENGINEER
+                </span>
+              </div>
+
+              <button onclick="openCurrentCardImage('wylout-card-img', 'wylout-card-caption')" class="absolute top-3 right-3 p-2 rounded bg-obsidian/80 hover:bg-bronze text-white hover:text-obsidian border border-white/15 transition" title="Inspect Full Image">
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+
+              <div class="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-2">
+                <div>
+                  <span id="wylout-card-caption" class="block text-xs font-mono text-bronze">PROJECT: BANK OF INDUSTRY CORPORATE ATRIUM & TURNSTILE FIT-OUT</span>
+                  <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Wylout Designs Limited</h3>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Photo Selector Bar for Wylout -->
+            <div class="px-5 py-2.5 bg-obsidian/60 border-b border-white/10 flex items-center justify-between gap-2 overflow-x-auto">
+              <span class="text-[10px] font-mono text-slate-400 shrink-0">SITE PHOTOS:</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="switchCardPhoto('wylout-card-img', 'wylout-card-caption', 'image_8dc5ba.jpg', 'PROJECT: BANK OF INDUSTRY CORPORATE ATRIUM & TURNSTILE FIT-OUT')" class="px-2 py-1 rounded text-[10px] font-mono bg-bronze/20 text-bronze border border-bronze/40 hover:bg-bronze/30 transition">
+                  1. BOI Atrium
+                </button>
+                <button onclick="switchCardPhoto('wylout-card-img', 'wylout-card-caption', 'image_8dc97c.jpg', 'PROJECT: NIMASA / HLSI DEEP BLUE C4i COMMAND CENTER CONSOLES')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  2. C4i Consoles
+                </button>
+                <button onclick="switchCardPhoto('wylout-card-img', 'wylout-card-caption', 'image_8dc699.jpg', 'PROJECT: DEEP BLUE MARITIME COMMAND CENTER TECHNICAL HANDOVER')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  3. Command Team
+                </button>
+                <button onclick="switchCardPhoto('wylout-card-img', 'wylout-card-caption', 'image_8e3e59.jpg', 'PROJECT: WYLOUT EXECUTIVE STUDIO ACOUSTIC FROSTED-GLASS PARTITION')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  4. Glass Partition
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 space-y-4">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Operating as <strong class="text-white">Wylout Group</strong>, the firm executes institutional corporate interiors, mission-critical C4i command centers, structural steel framing (including 30m+ butterfly-roof cantilevers), and precision architectural glass envelopes across Lagos and Nigeria.
+              </p>
+              <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs font-mono text-slate-300">
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Structural Steel & Butterfly Canopies</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Tempered, Laminated & DGU Glazing</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• C4i Command & Atrium Turnstiles</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Acoustic Wood Cladding & Drywall</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 py-4 border-t border-white/10 bg-obsidian/40 flex items-center justify-between">
+            <span class="font-mono text-xs text-slate-400">STATUS: ACTIVE EXECUTION</span>
+            <button onclick="openVentureModal('wylout')" class="text-xs font-mono text-bronze hover:underline flex items-center gap-1.5">
+              <span>Inspect Engineering Dossier</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. ARCALAXIA SHIPPING COMPANY LTD -->
+        <div class="venture-card glass-card rounded-xl overflow-hidden flex flex-col justify-between cad-corner" data-category="maritime">
+          <div>
+            <!-- Visual Header with 4-Photo Switcher -->
+            <div class="relative h-72 bg-charcoal border-b border-white/10 overflow-hidden group">
+              <img 
+                id="arcalaxia-card-img"
+                src="image_8db776.jpg" 
+                alt="Arcalaxia Shipping Company Ltd — Lekki Deep Sea Port Quayside & ZPMC QC03 Gantry"
+                class="w-full h-full object-cover object-center transition duration-700 group-hover:scale-105"
+                onerror="handleImageFallback(this, 'image_8db776.jpg', 'Lekki Deep Sea Port Quayside Operations')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded bg-obsidian/85 border border-bronze/40 text-bronze font-mono text-[11px]">
+                  DIRECTOR • MARITIME & SOLID MINERALS
+                </span>
+              </div>
+
+              <button onclick="openCurrentCardImage('arcalaxia-card-img', 'arcalaxia-card-caption')" class="absolute top-3 right-3 p-2 rounded bg-obsidian/80 hover:bg-bronze text-white hover:text-obsidian border border-white/15 transition" title="Inspect Full Image">
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+
+              <div class="absolute bottom-3 left-3 right-3">
+                <span id="arcalaxia-card-caption" class="block text-xs font-mono text-bronze">OPERATIONS: LEKKI DEEP SEA PORT QUAYSIDE & ZPMC QC03 STS GANTRY</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Arcalaxia Shipping Company Ltd</h3>
+              </div>
+            </div>
+
+            <!-- Interactive Photo Selector Bar for Arcalaxia -->
+            <div class="px-5 py-2.5 bg-obsidian/60 border-b border-white/10 flex items-center justify-between gap-2 overflow-x-auto">
+              <span class="text-[10px] font-mono text-slate-400 shrink-0">PORT & VESSEL:</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="switchCardPhoto('arcalaxia-card-img', 'arcalaxia-card-caption', 'image_8db776.jpg', 'OPERATIONS: LEKKI DEEP SEA PORT QUAYSIDE & ZPMC QC03 STS GANTRY')" class="px-2 py-1 rounded text-[10px] font-mono bg-bronze/20 text-bronze border border-bronze/40 hover:bg-bronze/30 transition">
+                  1. Quayside QC03
+                </button>
+                <button onclick="switchCardPhoto('arcalaxia-card-img', 'arcalaxia-card-caption', 'image_8db67e.jpg', 'OPERATIONS: LEKKI FREEPORT TERMINAL BERTH & BREAKWATER INFRASTRUCTURE')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  2. Freeport Terminal
+                </button>
+                <button onclick="switchCardPhoto('arcalaxia-card-img', 'arcalaxia-card-caption', 'image_8db3b3.jpg', 'OPERATIONS: VESSEL SUPERSTRUCTURE, MAST & FIRE-MAIN DECK PIPING')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  3. Vessel Deck
+                </button>
+                <button onclick="switchCardPhoto('arcalaxia-card-img', 'arcalaxia-card-caption', 'image_8db6f4.jpg', 'OPERATIONS: VESSEL NAVIGATION BRIDGE & INTEGRATED HELM TELEMETRY')" class="px-2 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  4. Ship Bridge
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 space-y-4">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Directing deep-sea port logistics, vessel chartering, and 100,000 MT bulk carrier acquisition strategies alongside solid mineral export supply chains for industrial-grade <strong class="text-white">bauxite, kaolin, and gypsum</strong>.
+              </p>
+              <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs font-mono text-slate-300">
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• 100,000 MT Bulk Vessel Strategy</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Bauxite, Kaolin & Gypsum Export</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Deep-Sea Terminal Quayside Ops</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Bridge & Chartering Compliance</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 py-4 border-t border-white/10 bg-obsidian/40 flex items-center justify-between">
+            <span class="font-mono text-xs text-slate-400">CORRIDOR: WEST AFRICA / GLOBAL</span>
+            <button onclick="openVentureModal('arcalaxia')" class="text-xs font-mono text-bronze hover:underline flex items-center gap-1.5">
+              <span>Inspect Maritime Dossier</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. CLEANCYCLES RECOVERY LIMITED -->
+        <div class="venture-card glass-card rounded-xl overflow-hidden flex flex-col justify-between cad-corner" data-category="industrial">
+          <div>
+            <!-- Visual Header -->
+            <div class="relative h-72 bg-charcoal border-b border-white/10 overflow-hidden group">
+              <img 
+                id="cleancycles-card-img"
+                src="image_8dbe97.jpg" 
+                alt="Cleancycles Recovery Limited — Industrial Process Columns & Plant Remediation"
+                class="w-full h-full object-cover object-center transition duration-700 group-hover:scale-105"
+                onerror="handleImageFallback(this, 'image_8dbe97.jpg', 'Industrial Process Plant & Decommissioning')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded bg-obsidian/85 border border-bronze/40 text-bronze font-mono text-[11px]">
+                  FOUNDER & DIRECTOR
+                </span>
+              </div>
+
+              <button onclick="openCurrentCardImage('cleancycles-card-img', 'cleancycles-card-caption')" class="absolute top-3 right-3 p-2 rounded bg-obsidian/80 hover:bg-bronze text-white hover:text-obsidian border border-white/15 transition" title="Inspect Full Image">
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+
+              <div class="absolute bottom-3 left-3 right-3">
+                <span id="cleancycles-card-caption" class="block text-xs font-mono text-bronze">PLANT SITE: HEAVY DISTILLATION COLUMNS, SPHERICAL VESSELS & MANIFOLDS</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Cleancycles Recovery Limited</h3>
+              </div>
+            </div>
+
+            <!-- Interactive Photo Selector Bar for Cleancycles -->
+            <div class="px-5 py-2.5 bg-obsidian/60 border-b border-white/10 flex items-center justify-between gap-2">
+              <span class="text-[10px] font-mono text-slate-400">PLANT & FIELD VIEWS:</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="switchCardPhoto('cleancycles-card-img', 'cleancycles-card-caption', 'image_8dbe97.jpg', 'PLANT SITE: HEAVY DISTILLATION COLUMNS, SPHERICAL VESSELS & MANIFOLDS')" class="px-2.5 py-1 rounded text-[10px] font-mono bg-bronze/20 text-bronze border border-bronze/40 hover:bg-bronze/30 transition">
+                  1. Process Plant & Columns
+                </button>
+                <button onclick="switchCardPhoto('cleancycles-card-img', 'cleancycles-card-caption', 'image_8dc27b.jpg', 'FIELD INSPECTION: ENGR. VICTOR AMOSU & TECHNICAL PPE DECOMMISSIONING TEAM')" class="px-2.5 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  2. Field Engineering Team
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 space-y-4">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Industrial asset decommissioning, heavy machinery dismantling, metallurgical scrap recovery, and brownfield plant remediation for large-scale manufacturing, refining, and energy facilities.
+              </p>
+              <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs font-mono text-slate-300">
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Heavy Plant Decommissioning</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Ferrous & Non-Ferrous Metallurgy</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Pressure Vessel Dismantling</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Environmental Site Remediation</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 py-4 border-t border-white/10 bg-obsidian/40 flex items-center justify-between">
+            <span class="font-mono text-xs text-slate-400">COMPLIANCE: HSE & ISO ALIGNED</span>
+            <button onclick="openVentureModal('cleancycles')" class="text-xs font-mono text-bronze hover:underline flex items-center gap-1.5">
+              <span>Inspect Remediation Dossier</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. MISIMAU LIMITED -->
+        <div class="venture-card glass-card rounded-xl overflow-hidden flex flex-col justify-between cad-corner" data-category="maritime industrial">
+          <div>
+            <!-- Visual Header -->
+            <div class="relative h-72 bg-charcoal border-b border-white/10 overflow-hidden group">
+              <img 
+                id="misimau-card-img"
+                src="image_8dc27b.jpg" 
+                alt="Misimau Limited — Field Engineering & Petroleum Infrastructure Inspection"
+                class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-105"
+                onerror="handleImageFallback(this, 'image_8dc27b.jpg', 'Misimau Energy Field Inspection')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/30 to-transparent"></div>
+              
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="px-2.5 py-1 rounded bg-obsidian/85 border border-bronze/40 text-bronze font-mono text-[11px]">
+                  DIRECTOR & SENIOR PARTNER
+                </span>
+              </div>
+
+              <button onclick="openCurrentCardImage('misimau-card-img', 'misimau-card-caption')" class="absolute top-3 right-3 p-2 rounded bg-obsidian/80 hover:bg-bronze text-white hover:text-obsidian border border-white/15 transition" title="Inspect Full Image">
+                <i data-lucide="expand" class="w-4 h-4"></i>
+              </button>
+
+              <div class="absolute bottom-3 left-3 right-3">
+                <span id="misimau-card-caption" class="block text-xs font-mono text-bronze">OPERATIONS: DOWNSTREAM ENERGY & INDUSTRIAL TERMINAL INSPECTION</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white">Misimau Limited</h3>
+              </div>
+            </div>
+
+            <!-- Interactive Photo Selector Bar for Misimau -->
+            <div class="px-5 py-2.5 bg-obsidian/60 border-b border-white/10 flex items-center justify-between gap-2">
+              <span class="text-[10px] font-mono text-slate-400">ENERGY INFRASTRUCTURE:</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="switchCardPhoto('misimau-card-img', 'misimau-card-caption', 'image_8dc27b.jpg', 'OPERATIONS: DOWNSTREAM ENERGY & INDUSTRIAL TERMINAL INSPECTION')" class="px-2.5 py-1 rounded text-[10px] font-mono bg-bronze/20 text-bronze border border-bronze/40 hover:bg-bronze/30 transition">
+                  1. Field Inspection Team
+                </button>
+                <button onclick="switchCardPhoto('misimau-card-img', 'misimau-card-caption', 'image_8dbe97.jpg', 'INFRASTRUCTURE: REFINING COLUMNS, SPHERICAL STORAGE & PIPING MANIFOLDS')" class="px-2.5 py-1 rounded text-[10px] font-mono bg-white/5 text-slate-300 border border-white/10 hover:border-bronze transition">
+                  2. Refining & Manifold Complex
+                </button>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 space-y-4">
+              <p class="text-slate-300 text-sm leading-relaxed">
+                Licensed petroleum product distribution and bulk commodity trading enterprise executing reliable downstream energy allocations, depot-to-industrial haulage, and commercial off-take contracts.
+              </p>
+              <div class="grid grid-cols-2 gap-2.5 pt-1 text-xs font-mono text-slate-300">
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Bulk Petroleum Distribution (AGO/PMS)</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Commodity Off-Take Structuring</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Terminal & Depot Logistics</div>
+                <div class="p-2.5 rounded bg-white/5 border border-white/5">• Industrial Energy Supply Contracts</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="px-6 py-4 border-t border-white/10 bg-obsidian/40 flex items-center justify-between">
+            <span class="font-mono text-xs text-slate-400">DIVISION: ENERGY & COMMODITIES</span>
+            <button onclick="openVentureModal('misimau')" class="text-xs font-mono text-bronze hover:underline flex items-center gap-1.5">
+              <span>Inspect Energy Dossier</span>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FACADE, CORPORATE FIT-OUT & C4i COMMAND ENGINEERING SECTION -->
+  <section id="engineering" class="py-20 px-4 sm:px-8 border-b border-white/10 bg-charcoal/40">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <div class="font-mono text-xs text-bronze uppercase tracking-widest mb-2">// 02 • MATERIALS SCIENCE & ARCHITECTURAL EXECUTION</div>
+        <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white">Institutional Fit-Outs, Command Centers & Metallurgy</h2>
+        <p class="text-slate-400 text-sm sm:text-base max-w-3xl mt-3">
+          Applying first-principles metallurgical engineering—tensile load optimization, acoustic attenuation, corrosion control, and passive hygrothermal envelope research—to institutional buildings and maritime security centers.
+        </p>
+      </div>
+
+      <!-- Interactive Engineering Showcase Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Left 7 Columns: Live Project Visual Inspector -->
+        <div class="lg:col-span-7 glass-card rounded-xl p-4 sm:p-5 cad-corner">
+          <div class="flex flex-wrap items-center justify-between gap-2 pb-3 mb-4 border-b border-white/10">
+            <span id="eng-viewer-badge" class="font-mono text-xs text-bronze">SPEC_01 // BANK OF INDUSTRY CORPORATE ATRIUM FIT-OUT</span>
+            <button onclick="openCurrentCardImage('eng-main-img', 'eng-viewer-badge')" class="text-xs font-mono text-slate-300 hover:text-bronze flex items-center gap-1">
+              <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+              <span>Full Screen</span>
+            </button>
+          </div>
+
+          <div class="relative aspect-[16/10] rounded-lg overflow-hidden bg-obsidian border border-white/10">
+            <img 
+              id="eng-main-img"
+              src="image_8dc5ba.jpg" 
+              alt="Engineering Execution Inspection"
+              class="w-full h-full object-cover object-center transition duration-500"
+              onerror="handleImageFallback(this, 'image_8dc5ba.jpg', 'Institutional Fit-Out Execution')"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent"></div>
+            <div class="absolute bottom-3 left-3 right-3 p-3 rounded bg-obsidian/85 backdrop-blur-md border border-white/10">
+              <div id="eng-viewer-title" class="text-base font-serif font-bold text-white">Bank of Industry (BOI) Multi-Story Atrium & Access Control</div>
+              <div id="eng-viewer-desc" class="text-xs text-slate-300 mt-0.5">Full-height acoustic timber slat wall cladding, stainless steel optical turnstiles, curved reception desk, and multi-tier atrium stainless steel balustrades.</div>
+            </div>
+          </div>
+
+          <!-- 5-Button Technical Switcher -->
+          <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 mt-4">
+            <button onclick="switchEngShowcase('image_8dc5ba.jpg', 'SPEC_01 // BANK OF INDUSTRY CORPORATE ATRIUM FIT-OUT', 'Bank of Industry (BOI) Multi-Story Atrium & Access Control', 'Full-height acoustic timber slat wall cladding, stainless steel optical turnstiles, curved reception desk, and multi-tier atrium stainless steel balustrades.')" class="p-2 rounded bg-white/5 hover:bg-bronze/15 border border-bronze/40 text-left transition">
+              <div class="font-mono text-[10px] text-bronze">01. BOI Atrium</div>
+              <div class="text-[11px] text-white font-medium truncate">Cladding & Turnstiles</div>
+            </button>
+            <button onclick="switchEngShowcase('image_8dc97c.jpg', 'SPEC_02 // NIMASA / HLSI DEEP BLUE C4i CONSOLES', 'Deep Blue C4i Maritime Security Command Center', 'Multi-operator surveillance console desks, integrated cable raceways, acoustic ceiling grid, and high-availability display mounts.')" class="p-2 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 text-left transition">
+              <div class="font-mono text-[10px] text-slate-400">02. C4i Consoles</div>
+              <div class="text-[11px] text-white font-medium truncate">Command Fit-Out</div>
+            </button>
+            <button onclick="switchEngShowcase('image_8dc699.jpg', 'SPEC_03 // C4i RADAR & AIS TELEMETRY INTEGRATION', 'Deep Blue Command Center — Joint Technical Inspection', 'Engr. Victor Amosu alongside international technical partners inspecting live coastal radar and vessel tracking workstations.')" class="p-2 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 text-left transition">
+              <div class="font-mono text-[10px] text-slate-400">03. C4i Radar Wall</div>
+              <div class="text-[11px] text-white font-medium truncate">Systems Handover</div>
+            </button>
+            <button onclick="switchEngShowcase('image_8e3e59.jpg', 'SPEC_04 // ACOUSTIC FROSTED-GLASS PARTITION SYSTEM', 'Wylout Executive Studio Partitioning & Ergonomics', 'Tempered monolithic glass with precision sandblasted privacy bands and anodized black aluminum framing channels.')" class="p-2 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 text-left transition">
+              <div class="font-mono text-[10px] text-slate-400">04. Glass Systems</div>
+              <div class="text-[11px] text-white font-medium truncate">Acoustic Glazing</div>
+            </button>
+            <button onclick="switchEngShowcase('image_8dbe97.jpg', 'SPEC_05 // INDUSTRIAL METALLURGY & PROCESS VESSELS', 'High-Pressure Process Piping & Distillation Towers', 'Metallurgical integrity assessment, corrosion analysis, and heavy industrial plant decommissioning via Cleancycles Recovery.')" class="p-2 rounded bg-white/5 hover:bg-bronze/15 border border-white/10 text-left transition col-span-2 sm:col-span-1">
+              <div class="font-mono text-[10px] text-slate-400">05. Process Plant</div>
+              <div class="text-[11px] text-white font-medium truncate">Heavy Metallurgy</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right 5 Columns: Technical Specifications & Doctoral Research -->
+        <div class="lg:col-span-5 space-y-5">
+          <div class="glass-card p-6 rounded-xl">
+            <div class="flex items-center gap-2.5 text-bronze font-mono text-xs mb-2">
+              <i data-lucide="layers" class="w-4 h-4"></i>
+              <span>STRUCTURAL & ARCHITECTURAL ENVELOPE SPECS</span>
+            </div>
+            <h3 class="font-serif text-2xl font-bold text-white mb-3">First-Principles Material Selection</h3>
+            <ul class="space-y-3 text-sm text-slate-300">
+              <li class="flex items-start gap-2.5">
+                <span class="text-bronze font-mono mt-0.5">01</span>
+                <span><strong class="text-white">Architectural Glazing & Curtain Walls:</strong> Tempered, laminated, and insulated double-glazed units (DGU) engineered for coastal wind-load resilience and solar heat gain reduction.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-bronze font-mono mt-0.5">02</span>
+                <span><strong class="text-white">Structural Steel & Cantilevers:</strong> Custom 30m+ butterfly-roof steel carports, high-load warehouse trusses, and multi-tier stainless steel atrium balustrades.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-bronze font-mono mt-0.5">03</span>
+                <span><strong class="text-white">Global Supply Chain Sourcing:</strong> Direct factory quality assurance and procurement across Guangzhou (139th Canton Fair) for WPC profiles, architectural hardware, and heavy aluminum extrusions.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="glass-card p-6 rounded-xl border-l-4 border-l-bronze">
+            <div class="flex items-center gap-2.5 text-bronze font-mono text-xs mb-2">
+              <i data-lucide="microscope" class="w-4 h-4"></i>
+              <span>ADVANCED R&D // SUSTAINABLE ENVELOPES</span>
+            </div>
+            <h3 class="font-serif text-xl font-bold text-white mb-2">Bio-Reinforced Composite Building Systems</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Ongoing doctoral-track research investigating <strong class="text-white">bio-reinforced clay/gypsum composite building envelopes</strong> and passive hygrothermal regulation—reducing mechanical cooling loads in tropical coastal zones through phase-stable natural mineral matrices.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CIVIC GOVERNANCE, WATERWAYS & URBAN RESILIENCE (image_8dafb6.jpg) -->
+  <section id="civic" class="py-20 px-4 sm:px-8 border-b border-white/10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left 6 Columns: LASWA / LESTRA Waterway Inspection Photo -->
+        <div class="lg:col-span-6">
+          <div class="glass-card p-3 sm:p-4 rounded-xl cad-corner">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/10 text-xs font-mono text-slate-400">
+              <span class="text-bronze">FIELD_RECON // LASWA & LESTRA WATERWAYS</span>
+              <button onclick="openLightbox('image_8dafb6.jpg', 'LESTRA & LASWA Hydrological Reconnaissance', 'Engr. Victor Amosu onboard a Lagos State Waterways Authority (LASWA) patrol vessel conducting canal outflow and coastal drainage inspections.')" class="text-slate-300 hover:text-bronze flex items-center gap-1">
+                <i data-lucide="maximize-2" class="w-3.5 h-3.5"></i>
+                <span>Inspect</span>
+              </button>
+            </div>
+            <div class="relative aspect-[16/11] rounded-lg overflow-hidden bg-charcoal border border-white/10">
+              <img 
+                src="image_8dafb6.jpg" 
+                alt="Engr. Victor Amosu on LASWA Waterway Inspection Boat"
+                class="w-full h-full object-cover object-center"
+                onerror="handleImageFallback(this, 'image_8dafb6.jpg', 'LASWA / LESTRA Waterway Inspection')"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 left-3 right-3 p-3.5 rounded bg-obsidian/85 backdrop-blur-md border border-white/10">
+                <div class="text-[10px] font-mono text-bronze uppercase">On-Water Hydrological & Drainage Assessment</div>
+                <div class="text-sm font-serif font-bold text-white">Engr. Victor Amosu — LESTRA Environment & Infrastructure Directorate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right 6 Columns: Civic Leadership Roles -->
+        <div class="lg:col-span-6 space-y-6">
+          <div class="font-mono text-xs text-bronze uppercase tracking-widest">// 03 • CIVIC INFRASTRUCTURE & URBAN RESILIENCE</div>
+          <h2 class="font-serif text-3xl sm:text-5xl font-bold text-white leading-tight">
+            Protecting Estate Infrastructure at <span class="accent-text italic font-normal">LESTRA</span> & <span class="accent-text italic font-normal">Westwoods Cluster</span>.
+          </h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Combining engineering diagnostics with active civic leadership across Lekki Scheme 2, Lagos—spearheading primary canal desilting, flood mitigation, road rehabilitation, and environmental compliance alongside state waterways and infrastructure agencies.
+          </p>
+
+          <div class="space-y-4">
+            <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-bronze/15 border border-bronze/40 flex items-center justify-center text-bronze shrink-0">
+                <i data-lucide="waves" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-mono text-bronze uppercase">LEKKI SCHEME 2 RESIDENTS ASSOCIATION (LESTRA)</div>
+                <h3 class="text-lg font-bold text-white mt-0.5">Vice Chairman & Chairman, Environment and Infrastructure Committee</h3>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">
+                  Directing primary canal desilting engineering, hydraulic outfall clearance, road network restoration, and utility governance across Lekki Scheme 2.
+                </p>
+              </div>
+            </div>
+
+            <div class="glass-card p-5 rounded-xl flex items-start gap-4">
+              <div class="w-10 h-10 rounded-lg bg-bronze/15 border border-bronze/40 flex items-center justify-center text-bronze shrink-0">
+                <i data-lucide="shield" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <div class="text-xs font-mono text-bronze uppercase">CLUSTER GOVERNANCE • LEKKI SCHEME 2</div>
+                <h3 class="text-lg font-bold text-white mt-0.5">Chairman — Westwoods Cluster</h3>
+                <p class="text-xs sm:text-sm text-slate-300 mt-1">
+                  Leading security architecture, drainage integrity, power reliability initiatives, and resident infrastructure standards within Westwoods Cluster.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXECUTIVE INQUIRY & CONTACT SECTION -->
+  <section id="contact" class="py-20 px-4 sm:px-8">
+    <div class="max-w-5xl mx-auto">
+      <div class="glass-card rounded-2xl p-6 sm:p-10 lg:p-12 cad-corner">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <div class="font-mono text-xs text-bronze uppercase tracking-widest mb-2">// 04 • DIRECT DISPATCH</div>
+              <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Initiate an Executive Inquiry</h2>
+              <p class="text-slate-400 text-sm mt-2 leading-relaxed">
+                Select the relevant operating company or civic directorate below to route your structural, industrial, maritime, or community brief directly to Engr. Victor Amosu's office.
+              </p>
+            </div>
+
+            <div class="space-y-3 text-xs font-mono text-slate-300 pt-2">
+              <div class="p-3 rounded bg-white/5 border border-white/10 flex items-center gap-3">
+                <i data-lucide="map-pin" class="w-4 h-4 text-bronze shrink-0"></i>
+                <span>Lekki Scheme 2 • Victoria Island • Ikoyi • Ikeja, Lagos, Nigeria</span>
+              </div>
+              <div class="p-3 rounded bg-white/5 border border-white/10 flex items-center gap-3">
+                <i data-lucide="globe" class="w-4 h-4 text-bronze shrink-0"></i>
+                <span>Official Portal: www.victoramosu.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <form id="executive-contact-form" onsubmit="handleInquirySubmit(event)" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-mono text-[11px] text-slate-400 uppercase mb-1.5">Your Full Name / Title *</label>
+                  <input type="text" id="inq-name" required placeholder="e.g. Engr. / Director Name" class="w-full px-3.5 py-2.5 rounded bg-obsidian/90 border border-white/15 text-white text-sm focus:border-bronze focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block font-mono text-[11px] text-slate-400 uppercase mb-1.5">Organization / Email *</label>
+                  <input type="email" id="inq-email" required placeholder="name@company.com" class="w-full px-3.5 py-2.5 rounded bg-obsidian/90 border border-white/15 text-white text-sm focus:border-bronze focus:outline-none" />
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-mono text-[11px] text-slate-400 uppercase mb-1.5">Target Directorate / Operating Firm *</label>
+                <select id="inq-division" class="w-full px-3.5 py-2.5 rounded bg-obsidian/90 border border-white/15 text-white text-sm focus:border-bronze focus:outline-none">
+                  <option value="Wylout Designs Limited — Structural Steel, Glazing & Corporate Fit-Out">Wylout Designs Limited — Structural Steel, Glazing & Corporate Fit-Out</option>
+                  <option value="Arcalaxia Shipping Company Ltd — Maritime Bulk Vessels & Solid Minerals">Arcalaxia Shipping Company Ltd — Maritime Bulk Vessels & Solid Minerals</option>
+                  <option value="Cleancycles Recovery Limited — Industrial Decommissioning & Remediation">Cleancycles Recovery Limited — Industrial Decommissioning & Remediation</option>
+                  <option value="Misimau Limited — Petroleum Distribution & Commodity Trading">Misimau Limited — Petroleum Distribution & Commodity Trading</option>
+                  <option value="LESTRA & Westwoods Cluster — Civic Infrastructure & Environment">LESTRA & Westwoods Cluster — Civic Infrastructure & Environment</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block font-mono text-[11px] text-slate-400 uppercase mb-1.5">Project Scope / Technical Brief *</label>
+                <textarea id="inq-message" rows="4" required placeholder="Specify project location, structural/tonnage metrics, or partnership scope..." class="w-full px-3.5 py-2.5 rounded bg-obsidian/90 border border-white/15 text-white text-sm focus:border-bronze focus:outline-none"></textarea>
+              </div>
+
+              <div class="flex flex-wrap items-center justify-between gap-4 pt-2">
+                <span id="form-feedback" class="text-xs font-mono text-emerald-400 hidden">✓ Dispatch prepared for transmission.</span>
+                <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded bg-bronze text-obsidian font-semibold hover:bg-bronze-light transition flex items-center justify-center gap-2 shadow-lg cursor-pointer">
+                  <span>Transmit Executive Brief</span>
+                  <i data-lucide="send" class="w-4 h-4"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 bg-obsidian py-10 px-4 sm:px-8 text-xs text-slate-400">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="w-7 h-7 rounded bg-bronze text-obsidian font-serif font-bold flex items-center justify-center text-sm">VA</span>
+        <span>© <span id="year-span">2026</span> Engr. Victor Amosu (`www.victoramosu.com`). All Rights Reserved.</span>
+      </div>
+      <div class="font-mono text-[11px] text-slate-500">
+        WYLOUT DESIGNS LTD • CLEANCYCLES RECOVERY LTD • MISIMAU LTD • ARCALAXIA SHIPPING LTD • LESTRA & WESTWOODS CLUSTER
+      </div>
+    </div>
+  </footer>
+
+  <!-- FULL-SCREEN IMAGE LIGHTBOX MODAL -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-obsidian/95 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8">
+    <div class="max-w-5xl w-full glass-card rounded-xl overflow-hidden border border-bronze/40">
+      <div class="px-5 py-3.5 border-b border-white/10 flex items-center justify-between">
+        <div>
+          <span id="lightbox-title" class="font-serif text-lg font-bold text-white">Image Inspection</span>
+          <span id="lightbox-subtitle" class="block font-mono text-xs text-bronze"></span>
+        </div>
+        <button onclick="closeLightbox()" class="p-1.5 rounded bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="bg-black flex items-center justify-center max-h-[75vh] overflow-hidden">
+        <img id="lightbox-img" src="" alt="Full View" class="max-h-[75vh] w-auto object-contain" />
+      </div>
+    </div>
+  </div>
+
+  <!-- VENTURE TECHNICAL DOSSIER MODAL -->
+  <div id="venture-modal" class="fixed inset-0 z-50 hidden bg-obsidian/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-6">
+    <div class="max-w-3xl w-full glass-card rounded-xl overflow-hidden border border-bronze/40 max-h-[90vh] flex flex-col">
+      <div class="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-charcoal">
+        <div>
+          <div id="vmodal-role" class="font-mono text-[11px] text-bronze uppercase"></div>
+          <h3 id="vmodal-title" class="font-serif text-2xl font-bold text-white"></h3>
+        </div>
+        <button onclick="closeVentureModal()" class="p-1.5 rounded bg-white/5 hover:bg-white/15 text-slate-300">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <div class="p-6 overflow-y-auto space-y-5">
+        <img id="vmodal-img" src="" alt="Venture Visual" class="w-full h-64 object-cover rounded-lg border border-white/10" />
+        <p id="vmodal-desc" class="text-slate-300 text-sm leading-relaxed"></p>
+        <div id="vmodal-specs" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-200"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Safe Lucide initialization
+    function initLucideIcons() {
+      if (typeof window.lucide !== 'undefined' && window.lucide.createIcons) {
+        window.lucide.createIcons();
+      }
+    }
+
+    // Live Lagos WAT Clock
+    function updateClock() {
+      try {
+        const now = new Date();
+        const options = { timeZone: 'Africa/Lagos', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+        const timeString = new Intl.DateTimeFormat('en-GB', options).format(now);
+        const el = document.getElementById('lagos-time');
+        if (el) el.textContent = `WAT (UTC+1): ${timeString}`;
+      } catch (e) {}
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    // Blueprint / Obsidian Theme Toggle
+    function toggleBlueprintMode() {
+      document.body.classList.toggle('blueprint-mode');
+      const isBp = document.body.classList.contains('blueprint-mode');
+      document.getElementById('mode-label').textContent = isBp ? 'Obsidian Mode' : 'CAD Blueprint Mode';
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+
+    // Hero Portrait Color / Monochrome Grade Toggle
+    let isMono = false;
+    function togglePortraitGrade() {
+      isMono = !isMono;
+      const img = document.getElementById('hero-portrait-img');
+      const btn = document.getElementById('grade-btn');
+      if (isMono) {
+        img.classList.remove('photo-grade-color');
+        img.classList.add('photo-grade-mono');
+        btn.textContent = 'Grade: B&W Architectural';
+      } else {
+        img.classList.remove('photo-grade-mono');
+        img.classList.add('photo-grade-color');
+        btn.textContent = 'Grade: Color';
+      }
+    }
+
+    // Switch Hero Photo
+    function switchHeroPhoto(filename, indicatorText, badgeTop, badgeSub) {
+      const img = document.getElementById('hero-portrait-img');
+      img.src = filename;
+      document.getElementById('hero-view-indicator').textContent = indicatorText;
+    }
+
+    // Switch Venture Card Photo
+    function switchCardPhoto(imgId, captionId, filename, captionText) {
+      const img = document.getElementById(imgId);
+      const cap = document.getElementById(captionId);
+      if (img) img.src = filename;
+      if (cap) cap.textContent = captionText;
+    }
+
+    // Switch Engineering Showcase Photo
+    function switchEngShowcase(filename, badge, title, desc) {
+      document.getElementById('eng-main-img').src = filename;
+      document.getElementById('eng-viewer-badge').textContent = badge;
+      document.getElementById('eng-viewer-title').textContent = title;
+      document.getElementById('eng-viewer-desc').textContent = desc;
+    }
+
+    // Filter Ventures
+    function filterVentures(category) {
+      const cards = document.querySelectorAll('.venture-card');
+      cards.forEach(card => {
+        if (category === 'all' || card.dataset.category.includes(category)) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Lightbox Inspection
+    function openLightbox(src, title, subtitle) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-title').textContent = title;
+      document.getElementById('lightbox-subtitle').textContent = subtitle || '';
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+    }
+
+    function openCurrentCardImage(imgId, captionId) {
+      const img = document.getElementById(imgId);
+      const cap = document.getElementById(captionId);
+      openLightbox(img.src, cap ? cap.textContent : 'Project Visual Inspection', 'www.victoramosu.com');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+    }
+
+    // Venture Technical Dossiers Data
+    const VENTURE_DATA = {
+      wylout: {
+        role: 'FOUNDER, MANAGING DIRECTOR & PRINCIPAL DESIGN ENGINEER',
+        title: 'Wylout Designs Limited (Wylout Group)',
+        img: 'image_8dc5ba.jpg',
+        desc: 'Lagos-headquartered construction, facade engineering, and corporate interior/exterior fit-out firm specializing in structural steel framing, institutional atrium fit-outs (Bank of Industry), C4i maritime security command centers (Deep Blue Project), and architectural glass systems.',
+        specs: [
+          '• Institutional Atriums & Turnstile Systems',
+          '• C4i Command Center Consoles & Ergonomics',
+          '• 30m+ Butterfly-Roof Cantilever Steel Carports',
+          '• Tempered, Laminated & Insulated Glazing'
+        ]
+      },
+      arcalaxia: {
+        role: 'DIRECTOR • MARITIME & SOLID MINERAL LOGISTICS',
+        title: 'Arcalaxia Shipping Company Ltd',
+        img: 'image_8db776.jpg',
+        desc: 'Maritime logistics and bulk commodity shipping company executing deep-sea port berth operations, 100,000 MT bulk carrier charter/acquisition strategies, and solid mineral export supply chains (bauxite, kaolin, and gypsum).',
+        specs: [
+          '• Deep-Sea Terminal Quayside Operations',
+          '• 100,000 MT Bulk Vessel Acquisition & Charter',
+          '• Bauxite, Kaolin & Gypsum Export Logistics',
+          '• Bridge Navigation & Maritime Compliance'
+        ]
+      },
+      cleancycles: {
+        role: 'FOUNDER & DIRECTOR',
+        title: 'Cleancycles Recovery Limited',
+        img: 'image_8dbe97.jpg',
+        desc: 'Industrial asset decommissioning, heavy machinery dismantling, process plant recovery, and environmental site remediation serving large-scale refining, petrochemical, and manufacturing facilities.',
+        specs: [
+          '• Distillation Column & Pressure Vessel Dismantling',
+          '• Ferrous & Non-Ferrous Metallurgical Recovery',
+          '• Heavy Machinery Decommissioning',
+          '• Industrial Brownfield Site Remediation'
+        ]
+      },
+      misimau: {
+        role: 'DIRECTOR & SENIOR PARTNER',
+        title: 'Misimau Limited',
+        img: 'image_8dc27b.jpg',
+        desc: 'Licensed petroleum product distribution and bulk commodity trading company managing downstream depot allocations, industrial energy supply contracts, and structured bulk off-take operations.',
+        specs: [
+          '• Bulk Petroleum Product Distribution',
+          '• Downstream Depot & Terminal Operations',
+          '• Industrial Energy Supply Chain Management',
+          '• Commodity Trading & Joint Ventures'
+        ]
+      }
+    };
+
+    function openVentureModal(key) {
+      const data = VENTURE_DATA[key];
+      if (!data) return;
+      document.getElementById('vmodal-role').textContent = data.role;
+      document.getElementById('vmodal-title').textContent = data.title;
+      document.getElementById('vmodal-img').src = data.img;
+      document.getElementById('vmodal-desc').textContent = data.desc;
+      const specsContainer = document.getElementById('vmodal-specs');
+      specsContainer.innerHTML = data.specs.map(s => `<div class="p-3 rounded bg-white/5 border border-white/10">${s}</div>`).join('');
+      document.getElementById('venture-modal').classList.remove('hidden');
+    }
+
+    function closeVentureModal() {
+      document.getElementById('venture-modal').classList.add('hidden');
+    }
+
+    // Graceful SVG Fallback if previewing before placing images in folder
+    function handleImageFallback(imgEl, filename, label) {
+      const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+        <rect width="800" height="600" fill="#11161F"/>
+        <g stroke="#C89D66" stroke-opacity="0.15" stroke-width="1">
+          <line x1="0" y1="150" x2="800" y2="150"/><line x1="0" y1="300" x2="800" y2="300"/><line x1="0" y1="450" x2="800" y2="450"/>
+          <line x1="200" y1="0" x2="200" y2="600"/><line x1="400" y1="0" x2="400" y2="600"/><line x1="600" y1="0" x2="600" y2="600"/>
+        </g>
+        <rect x="60" y="60" width="680" height="480" fill="none" stroke="#C89D66" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="6,6"/>
+        <text x="400" y="275" text-anchor="middle" fill="#C89D66" font-family="monospace" font-size="15">${label}</text>
+        <text x="400" y="310" text-anchor="middle" fill="#94A3B8" font-family="monospace" font-size="13">File Ready: ${filename}</text>
+      </svg>`;
+      imgEl.onerror = null;
+      imgEl.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+    }
+
+    // Contact Form Mailto Handler
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('inq-name').value;
+      const email = document.getElementById('inq-email').value;
+      const div = document.getElementById('inq-division').value;
+      const msg = document.getElementById('inq-message').value;
+      const subject = encodeURIComponent(`Executive Inquiry [${div}] — from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nTarget Directorate: ${div}\n\nBrief:\n${msg}`);
+      document.getElementById('form-feedback').classList.remove('hidden');
+      window.location.href = `mailto:info@victoramosu.com?subject=${subject}&body=${body}`;
+    }
+
+    window.addEventListener('DOMContentLoaded', initLucideIcons);
+  </script>
+</body>
+</html>
